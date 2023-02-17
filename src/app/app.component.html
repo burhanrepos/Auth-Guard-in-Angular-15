@@ -1,0 +1,35 @@
+<ul>
+  <li>
+    <button routerLink="/">Home</button>
+  </li>
+  <li>
+    <button routerLink="/view">View</button>
+  </li>
+  <li>
+    <button routerLink="/profile">Profile</button>
+  </li>
+  <li>
+    <button routerLink="/getName">View Name</button>
+  </li>
+  <li>
+    <button routerLink="/about">About</button>
+  </li>
+  <li>
+    <button routerLink="/contact">Contact</button>
+  </li>
+  <li>
+    <button routerLink="/term">Terms</button>
+  </li>
+  <li *ngIf="!isLogin">
+    <button (click)="login()">Sign In</button>
+  </li>
+  <li *ngIf="isLogin">
+    <button (click)="logout()">Sign Out</button>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    <router-outlet></router-outlet>
+  </li>
+</ul>
